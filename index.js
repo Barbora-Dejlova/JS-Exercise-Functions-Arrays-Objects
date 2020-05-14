@@ -36,9 +36,12 @@ function addNumbers(num1, num2) {
  * the returned value should look like: 'Goodbye, Andy. Have a great day.'
  * 
 */
-function sayGoodbye(/* code here */) {
-  /* code here */
+
+function sayGoodbye(name) {
+  return(`Goodbye, ${name}. Have a great day.`)
 }
+console.log(sayGoodbye(`Barbra!`));
+
 
 /**
  * ### Challenge `temperatureCtoF`
@@ -54,9 +57,11 @@ function sayGoodbye(/* code here */) {
  * Hint 1: The formula for converting celsius to fahrenheit is t*9/5 + 32 where t is the temperature in celsius.
  * Hint 2: There is a very easy way to round numbers in JS. Do a google search to find out how. 
 */
-function temperatureCtoF(/* code here */) {
-  /* code here */
+function temperatureCtoF(celsius) {
+  return(Math.round(celsius*(9/5)+32));
 }
+
+console.log(temperatureCtoF(24));
 
 /**
  * ### Challenge `temperatureInF`
@@ -75,9 +80,11 @@ function temperatureCtoF(/* code here */) {
  * 
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
-function temperatureInF(/* code here */) {
-  /* code here */
+function temperatureInF(temp,unit) {
+  if (unit===`C`){return(Math.round(temp*(9/5)+32))+`F`}else{return(`${temp}${unit}`)}
 }
+console.log(temperatureInF(24,`C`));
+
 
 
 /**
@@ -96,8 +103,18 @@ function temperatureInF(/* code here */) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
-  /* code here */
+function makePersonObject(idNum, firstName, address) {
+  // const object={
+  // id:number
+  // name:firstName
+  // address: address
+// }
+  return(
+    `id:${idNum},\nname:${firstName},\nemail:${address},`
+  )
+  
+}
+console.log(makePersonObject(5680,`Barbra`,`barbra@gmail.com`));
 }
 
 /**
